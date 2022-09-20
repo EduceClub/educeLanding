@@ -75,7 +75,7 @@ const SectionOne = () => {
             <div className={classes.bannerContentWrapper}>
                 <Typography className={classes.sectionOneHeader}>Simplify your knowledge</Typography>
                 <Typography className={classes.sectionOneSubheader}>Capture and build on your insights like never before.</Typography>
-                <Button className={classes.sectionOneJoinButton}>Learn More</Button>
+                <Button className={classes.sectionOneJoinButton}>Join the club</Button>
             </div>
             <div className={classes.bannerImageWrapper}>
                 <img className={classes.bannerImage} src={OrganizeOne} />

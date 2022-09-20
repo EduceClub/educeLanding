@@ -24,9 +24,7 @@ const withStyles = makeStyles((theme) => ({
     },
     howToContentWrapper: {
         display: "flex",
-        margin: "5% 14% 5% 14%",
         background: "#AAF0C1",
-        borderRadius: "35px",
         "@media(max-width: 600px)": {
             width: "100%",
             margin: "0px",
@@ -35,7 +33,7 @@ const withStyles = makeStyles((theme) => ({
     },
     gif: {
         width: "60%",
-        borderRadius: "35px",
+        borderRadius: "10px",
         maxHeight: "500px",
         "@media(max-width: 600px)": {
             width: "100%"
