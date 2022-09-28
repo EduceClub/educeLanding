@@ -54,7 +54,7 @@ const withStyles = makeStyles(() => ({
         "& span": {
             color: "white",
         }
-    
+
     },
     navBarHamburgerDrawerWrapper: {
         display: "none",
@@ -70,23 +70,46 @@ const withStyles = makeStyles(() => ({
         }
     },
     drawerItem: {
-        "&:hover":{
-            backgroundImage: "black",
-            border: "1px solid #000000",
+        "&:hover": {
+            backgroundColor: "#6db0a7",
             color: "black"
         },
-        "&:selected:hover":{
-            backgroundImage: "black",
-            border: "1px solid #000000",
+        "&:selected:hover": {
+            backgroundImage: "#6db0a7",
             color: "black"
         }
-      },
-      drawerItemLogin: {
+    },
+    drawerItemLogin: {
         backgroundColor: "black",
-      },
-      list: {
+        padding: "8px 16px",
+        "&:hover": {
+            backgroundColor: "#6db0a7",
+            color: "black"
+        },
+        "&:selected:hover": {
+            backgroundImage: "#6db0a7",
+            color: "black"
+        }
+        
+    },
+    drawerItemContact: {
+        fontSize: "1rem",
+        padding: "8px 16px",
+        "& span": {
+            textTransform: "none"
+        },
+        "&:hover": {
+            backgroundColor: "#6db0a7",
+            color: "black"
+        },
+        "&:selected:hover": {
+            backgroundImage: "#6db0a7",
+            color: "black"
+        }
+    },
+    list: {
         width: "250px"
-      },
+    },
 
 }));
 
@@ -102,11 +125,11 @@ const Nav = () => {
 
     const handleClick = (id) => {
         const section = document.querySelector(id);
-        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     return (
         <div className={classes.navbarWrapper}>
-            <div> 
+            <div>
                 <img
                     className={classes.navbarImage}
                     src={EduceLogo}
@@ -114,7 +137,7 @@ const Nav = () => {
                 />
             </div>
             <div className={classes.navbarMenuWrapper}>
-                <Button  onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>How it Works</Button>
+                <Button onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>How it Works</Button>
                 <Button href="mailto:tony@educe.club" className={classes.menuItem}>Contact</Button>
                 <Button target="_blank" href="https://app.educe.club/" className={classes.loginButton}>Login</Button>
             </div>
@@ -139,17 +162,16 @@ const Nav = () => {
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                            onClick={() => handleClick('#howItWorks')}
+                                onClick={() => handleClick('#howItWorks')}
                             >
                                 <ListItemText primary={"How it Works"} />
                             </ListItem>
-                            <ListItem
-                                className={classes.drawerItem}
-                                button
-                            onClick={() => console.log("you clicked contact")}
+                            <Button
+                                className={classes.drawerItemContact}
+                                href="mailto:tony@educe.club"
                             >
-                                <ListItemText primary={"Contact"} />
-                            </ListItem>
+                                Contact
+                            </Button>
                             <ListItem
                                 className={classes.drawerItemLogin}
                                 button
