@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Button, Typography, makeStyles } from '@material-ui/core';
 import EduceLogo from '../assets/educeLogo.png'
 import MenuIcon from '@material-ui/icons/Menu';
@@ -11,7 +11,7 @@ const withStyles = makeStyles(() => ({
     navbarWrapper: {
         display: "flex",
         justifyContent: "space-between",
-        background: "#AAF0C1",
+        background: "#ffffff",
         height: "75px",
         position: "fixed",
         top: 0,
@@ -29,6 +29,11 @@ const withStyles = makeStyles(() => ({
     },
     menuItem: {
         margin: "auto 15px auto 15px !important",
+        borderRadius: "35px",
+        "& span": {
+            textTransform: "none",
+            fontSize: "1rem"
+        }
     },
     loginButton: {
         backgroundColor: "black",
@@ -36,7 +41,14 @@ const withStyles = makeStyles(() => ({
         borderRadius: "35px",
         height: "35px",
         margin: "auto",
-        marginRight: "10px"
+        marginRight: "10px",
+        "&:hover": {
+            backgroundColor: "#6db0a7",
+        },
+        "& span": {
+            textTransform: "none",
+            fontSize: "1rem;"
+        }
     },
     loginButtonMobile: {
         "& span": {
@@ -89,12 +101,12 @@ const Nav = () => {
     }
 
     const handleClick = (id) => {
-        // let scrollToId = id
-        // setTimeout(() => scrollTo(scrollToId), 100)
+        const section = document.querySelector(id);
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
     }
     return (
         <div className={classes.navbarWrapper}>
-            <div>
+            <div> 
                 <img
                     className={classes.navbarImage}
                     src={EduceLogo}
@@ -102,9 +114,9 @@ const Nav = () => {
                 />
             </div>
             <div className={classes.navbarMenuWrapper}>
-                <Typography className={classes.menuItem}>How it Works</Typography>
-                <Typography className={classes.menuItem}>Contact</Typography>
-                <Button className={classes.loginButton}>Login</Button>
+                <Button  onClick={() => handleClick('#howItWorks')} className={classes.menuItem}>How it Works</Button>
+                <Button href="mailto:tony@educe.club" className={classes.menuItem}>Contact</Button>
+                <Button target="_blank" href="https://app.educe.club/" className={classes.loginButton}>Login</Button>
             </div>
             <div className={classes.navBarHamburgerDrawerWrapper}>
                 <MenuIcon
@@ -127,15 +139,14 @@ const Nav = () => {
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                            // onClick={() => handleClick('#services')}
+                            onClick={() => handleClick('#howItWorks')}
                             >
                                 <ListItemText primary={"How it Works"} />
                             </ListItem>
                             <ListItem
                                 className={classes.drawerItem}
                                 button
-                            // onClick={() => scrollTo('#about')}
-                            // onClick={() => handleClick("#about")}
+                            onClick={() => console.log("you clicked contact")}
                             >
                                 <ListItemText primary={"Contact"} />
                             </ListItem>

@@ -24,7 +24,7 @@ const withStyles = makeStyles((theme) => ({
     },
     howToContentWrapper: {
         display: "flex",
-        background: "#AAF0C1",
+        background: "#ffffff",
         "@media(max-width: 600px)": {
             width: "100%",
             margin: "0px",
@@ -44,7 +44,7 @@ const withStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly",
     },
     tabPanelElement: {
-        "& > div":{
+        "& > div": {
             padding: "20px 0px"
         }
     },
@@ -64,6 +64,9 @@ const withStyles = makeStyles((theme) => ({
     },
     tabLabelSelected: {
         color: "black !important",
+        "&:hover": {
+            backgroundColor: "#6db0a7",
+        },
     },
     tabLabelIndicator: {
         backgroundColor: "black",
@@ -102,19 +105,25 @@ const HowItWorks = () => {
         const { children, value, index, ...other } = props;
 
         return (
-            <div
-                role="tabpanel"
-                hidden={value !== index}
-                id={`simple-tabpanel-${index}`}
-                aria-labelledby={`simple-tab-${index}`}
-                {...other}
-            >
-                {value === index && (
-                    <Box sx={{ p: 3 }}>
-                        <div className={classes.tabsInnerContentWrapper}>{children}</div>
-                    </Box>
-                )}
-            </div>
+            <>
+                <div id="howItWorks">
+                </div>
+                <div
+                    role="tabpanel"
+                    hidden={value !== index}
+                    id={`simple-tabpanel-${index}`}
+                    aria-labelledby={`simple-tab-${index}`}
+                    {...other}
+                >
+
+                    {value === index && (
+                        <Box sx={{ p: 3 }}>
+                            <div className={classes.tabsInnerContentWrapper}>{children}</div>
+                        </Box>
+                    )}
+                </div>
+            </>
+
         );
     }
 
@@ -138,10 +147,10 @@ const HowItWorks = () => {
             <div className={classes.tabsWrapper}>
                 <Box>
                     <Box>
-                        <Tabs indicatorColor='secondary' classes={{ root: classes.tabLabel}} value={value} onChange={handleChange} aria-label="basic tabs example">
-                            <Tab classes={{root: classes.tabLabelSelected}} label="Store" {...a11yProps(0)} />
-                            <Tab classes={{root: classes.tabLabelSelected}} label="Build" {...a11yProps(1)} />
-                            <Tab classes={{root: classes.tabLabelSelected}} label="Recall" {...a11yProps(2)} />
+                        <Tabs indicatorColor='secondary' classes={{ root: classes.tabLabel }} value={value} onChange={handleChange} aria-label="basic tabs example">
+                            <Tab classes={{ root: classes.tabLabelSelected }} label="Store" {...a11yProps(0)} />
+                            <Tab classes={{ root: classes.tabLabelSelected }} label="Build" {...a11yProps(1)} />
+                            <Tab classes={{ root: classes.tabLabelSelected }} label="Recall" {...a11yProps(2)} />
                         </Tabs>
                     </Box>
 
@@ -155,10 +164,10 @@ const HowItWorks = () => {
 
                     <div className={classes.tabsContentWrapper}>
                         <TabPanel className={classes.tabPanelElement} value={value} index={1}>
-                            <Typography className={classes.tabsDescription}>Share categories with others to help build up on your insights. 
-                            Whether you have a work topic to share with colleagues and industry experts or you have a child's medical information you want to share with your partner.  
-                            <span> <br/><br/>Shared categories allow you to work with others to build updon your information.</span> </Typography>
-                         
+                            <Typography className={classes.tabsDescription}>Share categories with others to help build up on your insights.
+                                Whether you have a work topic to share with colleagues and industry experts or you have a child's medical information you want to share with your partner.
+                                <span> <br /><br />Shared categories allow you to work with others to build updon your information.</span> </Typography>
+
                             <img className={classes.gif} src={Buildon} />
                         </TabPanel>
                     </div>
@@ -167,7 +176,7 @@ const HowItWorks = () => {
                     <div className={classes.tabsContentWrapper}>
                         <TabPanel className={classes.tabPanelElement} value={value} index={2}>
                             <Typography className={classes.tabsDescription}>Category tags allow you to see all the insights or information you store to a topic in one view.
-                            This helps you organize your information over time.</Typography>
+                                This helps you organize your information over time.</Typography>
                             <img className={classes.gif} src={Recall} />
                         </TabPanel>
                     </div>

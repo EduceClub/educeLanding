@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button, Typography, makeStyles } from '@material-ui/core';
-import OrganizeOne from '../assets/organizationImage.svg'
+import OrganizeOne from '../assets/organizationPeace.svg'
 
 const withStyles = makeStyles(() => ({
     sectionOneWrapper: {
         display: "flex",
         alignItems: "center",
-        background: "#AAF0C1",
+        background: "#ffffff",
         height: "500px",
         marginTop: "40px",
         padding: "0px 14% 0 14%",
@@ -40,7 +40,7 @@ const withStyles = makeStyles(() => ({
             textTransform: "none",
         },
         "&:hover": {
-            backgroundColor: "gray"
+            backgroundColor: "#6db0a7",
         },
         "@media(max-width: 600px)": {
             width: "100%"
@@ -75,7 +75,7 @@ const SectionOne = () => {
             <div className={classes.bannerContentWrapper}>
                 <Typography className={classes.sectionOneHeader}>Simplify your knowledge</Typography>
                 <Typography className={classes.sectionOneSubheader}>Capture and build on your insights like never before.</Typography>
-                <Button className={classes.sectionOneJoinButton}>Join the club</Button>
+                <Button target="_blank" href="https://app.educe.club/" className={classes.sectionOneJoinButton}>Join the club</Button>
             </div>
             <div className={classes.bannerImageWrapper}>
                 <img className={classes.bannerImage} src={OrganizeOne} />
