@@ -80,8 +80,17 @@ const withStyles = makeStyles(() => ({
         }
     },
     drawerItemLogin: {
+        display: "flex",
         backgroundColor: "black",
         padding: "8px 16px",
+        width: "100%",
+        borderRadius: "0px",
+        "& span": {
+            textTransform: "none",
+            fontSize: "1rem",
+            color: "#ffffff",
+            justifyContent: "flex-start"
+        },
         "&:hover": {
             backgroundColor: "#6db0a7",
             color: "black"
@@ -90,7 +99,7 @@ const withStyles = makeStyles(() => ({
             backgroundImage: "#6db0a7",
             color: "black"
         }
-        
+
     },
     drawerItemContact: {
         fontSize: "1rem",
@@ -172,13 +181,12 @@ const Nav = () => {
                             >
                                 Contact
                             </Button>
-                            <ListItem
+                            <Button
                                 className={classes.drawerItemLogin}
-                                button
-                            // onClick={() => handleClick('#contactForm')}
+                                target="_blank" href="https://app.educe.club/"
                             >
-                                <ListItemText className={classes.loginButtonMobile} primary={"Login"} />
-                            </ListItem>
+                                Login
+                            </Button>
                         </List>
                     </div>
                 </Drawer>
