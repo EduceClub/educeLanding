@@ -139,7 +139,7 @@ const HowItWorks = () => {
                             <Tab classes={{ root: classes.tabLabelSelected }} label="Store" {...a11yProps(0)} />
                             <Tab classes={{ root: classes.tabLabelSelected }} label="Build" {...a11yProps(1)} />
                             <Tab classes={{ root: classes.tabLabelSelected }} label="Recall" {...a11yProps(2)} />
-                            <Tab classes={{ root: classes.tabLabelSelected }} label="Share" {...a11yProps(2)} />
+                            <Tab classes={{ root: classes.tabLabelSelected }} label="Share" {...a11yProps(3)} />
                         </Tabs>
                     </Box>
 
