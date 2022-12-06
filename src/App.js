@@ -7,10 +7,9 @@ import SectionThree from './components/SectionThree'
 import HowItWorks from './components/HowItWorks';
 import { createTheme, ThemeProvider } from "@mui/material";
 
-import ReactGA from 'react-ga';
-
+import ReactGA from "react-ga4";
 ReactGA.initialize('G-X5QZPD7RWC');
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.send("pageview");
 
 const educeTheme = createTheme({
   palette: {
