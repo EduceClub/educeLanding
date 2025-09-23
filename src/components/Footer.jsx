@@ -1,23 +1,9 @@
-import React from 'react';
-import { Typography, makeStyles } from '@material-ui/core';
-
-const withStyles = makeStyles(() => ({
-  footerWrapper: {
-    backgroundColor: 'black',
-    height: '75px',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  educeCopyright: {
-    color: 'white',
-    textAlign: 'left',
-    marginLeft: '15px',
-  },
-}));
+import { Typography } from '@material-ui/core';
+import { useFooterStyles } from './Footer.styles';
 
 const Footer = () => {
-  const classes = withStyles();
+  const classes = useFooterStyles();
+
   return (
     <div className={classes.footerWrapper}>
       <Typography className={classes.educeCopyright}>

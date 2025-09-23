@@ -1,91 +1,20 @@
-import { ClassNames } from '@emotion/react';
-import { Typography, makeStyles } from '@material-ui/core';
-import React, { useState } from 'react';
+import { Typography } from '@material-ui/core';
+import { useHowItWorksStyles } from './HowItWorks.styles';
+
+import { useState } from 'react';
 import Buildon from '../assets/Buildon2.gif';
 import Recall from '../assets/Recall.gif';
 import Store2 from '../assets/Store2.gif';
 import Share from '../assets/Share.gif';
 import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepButton from '@mui/material/StepButton';
-import StepContent from '@mui/material/StepContent';
-import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-const withStyles = makeStyles((theme) => ({
-  tabsWrapper: {
-    display: 'flex',
-    padding: '30px',
-    height: '600px',
-    '@media(max-width: 600px)': {
-      padding: '0px',
-    },
-  },
-  howToContentWrapper: {
-    display: 'flex',
-    background: '#ffffff',
-    '@media(max-width: 600px)': {
-      width: '100%',
-      margin: '0px',
-      borderRadius: '0px',
-    },
-  },
-  gif: {
-    width: '60%',
-    borderRadius: '10px',
-    maxHeight: '500px',
-    '@media(max-width: 600px)': {
-      width: '100%',
-    },
-  },
-  tabsContentWrapper: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-  },
-  tabPanelElement: {
-    '& > div': {
-      padding: '20px 0px',
-    },
-  },
-  tabsDescription: {
-    textAlign: 'left',
-    width: '100%',
-    margin: '10px 24px 0px 24px',
-    '@media(max-width: 600px)': {
-      margin: '0px',
-      marginBottom: '40px',
-    },
-  },
-  tabLabel: {
-    '& button': {
-      textTransform: 'none',
-    },
-  },
-  tabLabelSelected: {
-    color: 'black !important',
-    '&:hover': {
-      backgroundColor: '#6db0a7',
-    },
-  },
-  tabLabelIndicator: {
-    backgroundColor: 'black',
-  },
-  tabsInnerContentWrapper: {
-    display: 'flex',
-    '@media(max-width: 600px)': {
-      flexDirection: 'column',
-      padding: '10px',
-    },
-  },
-}));
-
 const HowItWorks = () => {
-  const classes = withStyles();
+  const classes = useHowItWorksStyles();
 
   const [activeStep, setActiveStep] = useState(0);
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
