@@ -1,34 +1,49 @@
-import { makeStyles } from '@material-ui/core';
+import { Grow, makeStyles } from '@material-ui/core';
 
 export const useSectionOneStyles = makeStyles(() => ({
   sectionOneWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '100%',
     alignItems: 'center',
-    background: '#ffffff',
-    minHeight: '500px',
-    marginTop: '40px',
-    padding: '0px 14% 0 14%',
-    maxWidth: '93%',
+    gap: '16px',
+    maxWidth: '700px',
+    margin: 'auto',
+    padding: '0 24px',
+    maxHeight: '500px',
     '@media(max-width: 600px)': {
       flexDirection: 'column',
       paddingTop: '100px',
       width: 'auto',
+      maxHeight: 'none',
     },
+    '@media(min-width: 1000px)': {
+      maxWidth: '75%',
+    },
+  },
+  bannerContentWrapper: {
+    display: 'flex',
+    flexBasis: '55%',
+    flexGrow: 0,
+    flexShrink: 0,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
   sectionOneHeader: {
     fontWeight: 'bold',
     fontSize: '3rem',
+    lineHeight: '3.5rem',
     textAlign: 'left',
     marginBottom: '20px',
     '@media(max-width: 600px)': {
-      fontSize: '2rem',
+      textAlign: 'center',
     },
   },
   sectionOneSubheader: {
     fontSize: '1rem',
     textAlign: 'left',
+    '@media(max-width: 600px)': {
+      textAlign: 'center',
+    },
   },
   sectionOneJoinButton: {
     background: 'black',
@@ -45,27 +60,37 @@ export const useSectionOneStyles = makeStyles(() => ({
       backgroundColor: '#6db0a7',
     },
     '@media(max-width: 600px)': {
-      width: '100%',
+      width: '75%',
+      margin: '12px auto',
     },
-  },
-  bannerImage: {
-    width: '53%',
-    borderRadius: '16px',
-    '@media(max-width: 600px)': {
-      width: '100%',
-    },
-  },
-  bannerContentWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    minWidth: '32vw',
   },
   bannerImageWrapper: {
     display: 'flex',
+    flexGrow: 1,
+    flexShrink: 1,
+    justifyContent: 'right',
+    height: '400px',
+    padding: '16px 0',
+    overflow: 'hidden',
+    '@media(min-width: 601px)': {
+      height: '275px',
+    },
+    '@media(min-width: 700px)': {
+      height: '325px',
+    },
+    '@media(min-width: 1100px)': {
+      height: '400px',
+    },
+  },
+  bannerImage: {
+    maxHeight: '100%', // key: let height shrink with aspect ratio
+    maxWidth: '100%',
+    width: 'auto',
+    height: 'auto',
+    objectFit: 'contain',
+    borderRadius: '16px',
     '@media(max-width: 600px)': {
-      justifyContent: 'center',
-      margin: '50px 0',
+      width: '100%',
     },
   },
 }));

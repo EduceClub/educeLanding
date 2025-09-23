@@ -6,9 +6,10 @@ export const useNavStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     background: '#ffffff',
     height: '75px',
-    position: 'fixed',
+    position: 'sticky',
     top: 0,
     width: '100%',
+    zIndex: 10,
   },
   navbarImage: {
     width: '200px',
@@ -21,8 +22,8 @@ export const useNavStyles = makeStyles(() => ({
     },
   },
   menuItem: {
-    margin: 'auto 15px auto 15px !important',
-    borderRadius: '35px',
+    margin: 'auto 10px !important',
+    borderRadius: '30px',
     '& span': {
       textTransform: 'none',
       fontSize: '1rem',
@@ -31,10 +32,11 @@ export const useNavStyles = makeStyles(() => ({
   loginButton: {
     backgroundColor: 'black',
     color: 'white',
-    borderRadius: '35px',
+    borderRadius: '30px',
     height: '35px',
     margin: 'auto',
-    marginRight: '10px',
+    marginLeft: '16px',
+    marginRight: '32px',
     '&:hover': {
       backgroundColor: '#6db0a7',
     },
