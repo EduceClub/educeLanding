@@ -1,0 +1,51 @@
+# See https://github.com/github/gitignore/blob/main/Node.gitignore
+
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REACT Native
+*.expo
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Coverage directory
+coverage/
+
+# Parcel-bundler cache
+.cache/
+
+# Next.js build output
+.next/
+
+# Storybook build output
+out/
