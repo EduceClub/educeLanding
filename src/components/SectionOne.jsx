@@ -1,4 +1,4 @@
-import { Button, Typography } from '@material-ui/core';
+import { Button, Typography } from '@mui/material';
 import { useSectionOneStyles } from './SectionOne.styles';
 import ScreenGIF from '../assets/2023_12_20_Final1.gif';
 
@@ -15,6 +15,7 @@ const SectionOne = () => {
           Capture and build on your insights like never before.
         </Typography>
         <Button
+          variant="contained"
           target="_blank"
           href="https://app.educe.club/"
           className={classes.sectionOneJoinButton}

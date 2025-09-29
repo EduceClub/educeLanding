@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { Button } from '@material-ui/core';
-import EduceLogo from '../assets/educeLogo.png';
-import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import {
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+  Drawer,
+  ListItemButton,
+} from '@mui/material';
 import { useNavStyles } from './Nav.styles';
+import EduceLogo from '../assets/educeLogo.png';
 
 const Nav = () => {
   const classes = useNavStyles();
@@ -19,28 +22,29 @@ const Nav = () => {
 
   const handleClick = (id) => {
     const section = document.querySelector(id);
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
+
   return (
     <div className={classes.navbarWrapper}>
-      <div>
-        <img
-          className={classes.navbarImage}
-          src={EduceLogo}
-          alt="company logo"
-        />
-      </div>
+      <img className={classes.navbarImage} src={EduceLogo} alt="company logo" />
       <div className={classes.navbarMenuWrapper}>
         <Button
+          variant="text"
           onClick={() => handleClick('#howItWorks')}
           className={classes.menuItem}
         >
           How it Works
         </Button>
-        <Button href="mailto:tony@educe.club" className={classes.menuItem}>
+        <Button
+          variant="text"
+          href="mailto:tony@educe.club"
+          className={classes.menuItem}
+        >
           Contact
         </Button>
         <Button
+          variant="contained"
           target="_blank"
           href="https://app.educe.club/"
           className={classes.loginButton}
@@ -63,26 +67,25 @@ const Nav = () => {
             onKeyDown={toggleDrawer}
           >
             <List>
-              <ListItem
+              <ListItemButton
                 className={classes.drawerItem}
-                button
                 onClick={() => handleClick('#howItWorks')}
               >
                 <ListItemText primary={'How it Works'} />
-              </ListItem>
-              <Button
-                className={classes.drawerItemContact}
+              </ListItemButton>
+              <ListItemButton
+                className={classes.drawerItem}
                 href="mailto:tony@educe.club"
               >
-                Contact
-              </Button>
-              <Button
+                <ListItemText primary={'Contact'} />
+              </ListItemButton>
+              <ListItemButton
                 className={classes.drawerItemLogin}
                 target="_blank"
                 href="https://app.educe.club/"
               >
-                Login
-              </Button>
+                <ListItemText primary={'Login'} />
+              </ListItemButton>
             </List>
           </div>
         </Drawer>

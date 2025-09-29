@@ -1,10 +1,10 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
-export const useNavStyles = makeStyles(() => ({
+export const useNavStyles = makeStyles((theme) => ({
   navbarWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    background: '#ffffff',
+    background: theme.palette.secondary.main,
     height: '75px',
     position: 'sticky',
     top: 0,
@@ -12,101 +12,65 @@ export const useNavStyles = makeStyles(() => ({
     zIndex: 10,
   },
   navbarImage: {
+    objectFit: 'contain',
     width: '200px',
-    margin: '10px',
+    margin: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
+      width: '175px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '150px',
+    },
   },
   navbarMenuWrapper: {
     display: 'flex',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   menuItem: {
     margin: 'auto 10px !important',
     borderRadius: '30px',
-    '& span': {
-      textTransform: 'none',
-      fontSize: '1rem',
-    },
+    textTransform: 'none',
+    fontSize: '1rem',
   },
   loginButton: {
-    backgroundColor: 'black',
-    color: 'white',
     borderRadius: '30px',
     height: '35px',
     margin: 'auto',
-    marginLeft: '16px',
-    marginRight: '32px',
+    marginLeft: theme.spacing(1.5),
+    marginRight: theme.spacing(4),
+    textTransform: 'none',
+    fontSize: '1rem',
     '&:hover': {
-      backgroundColor: '#6db0a7',
-    },
-    '& span': {
-      textTransform: 'none',
-      fontSize: '1rem;',
-    },
-  },
-  loginButtonMobile: {
-    '& span': {
-      color: 'white',
+      backgroundColor: theme.palette.accent.main,
     },
   },
   navBarHamburgerDrawerWrapper: {
     display: 'none',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       display: 'flex',
     },
   },
   hamburgerIcon: {
-    margin: '20px',
+    margin: theme.spacing(2),
     fontSize: '2.5rem',
-    '@media(min-width: 601px)': {
+    [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   },
   drawerItem: {
     '&:hover': {
-      backgroundColor: '#6db0a7',
-      color: 'black',
-    },
-    '&:selected:hover': {
-      backgroundImage: '#6db0a7',
-      color: 'black',
+      backgroundColor: theme.palette.accent.main,
+      color: theme.palette.primary.main,
     },
   },
   drawerItemLogin: {
     display: 'flex',
-    backgroundColor: 'black',
-    padding: '8px 16px',
-    width: '100%',
-    borderRadius: '0px',
-    '& span': {
-      textTransform: 'none',
-      fontSize: '1rem',
-      color: '#ffffff',
-      justifyContent: 'flex-start',
-    },
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
     '&:hover': {
-      backgroundColor: '#6db0a7',
-      color: 'black',
-    },
-    '&:selected:hover': {
-      backgroundImage: '#6db0a7',
-      color: 'black',
-    },
-  },
-  drawerItemContact: {
-    fontSize: '1rem',
-    padding: '8px 16px',
-    '& span': {
-      textTransform: 'none',
-    },
-    '&:hover': {
-      backgroundColor: '#6db0a7',
-      color: 'black',
-    },
-    '&:selected:hover': {
-      backgroundImage: '#6db0a7',
-      color: 'black',
+      backgroundColor: theme.palette.accent.main,
     },
   },
   list: {

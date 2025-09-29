@@ -1,5 +1,5 @@
 import ConfusionGuy from '../assets/confusionGuy.svg';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { useSectionTwoStyles } from './SectionTwo.styles';
 
 const SectionTwo = () => {

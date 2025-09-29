@@ -1,22 +1,22 @@
-import { Grow, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
-export const useSectionOneStyles = makeStyles(() => ({
+export const useSectionOneStyles = makeStyles((theme) => ({
   sectionOneWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    gap: '16px',
+    gap: theme.spacing(2),
     maxWidth: '700px',
     margin: 'auto',
-    padding: '0 24px',
+    padding: theme.spacing(3),
     maxHeight: '500px',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      paddingTop: '100px',
+      paddingTop: theme.spacing(12),
       width: 'auto',
       maxHeight: 'none',
     },
-    '@media(min-width: 1000px)': {
+    [theme.breakpoints.up('md')]: {
       maxWidth: '75%',
     },
   },
@@ -33,35 +33,31 @@ export const useSectionOneStyles = makeStyles(() => ({
     fontSize: '3rem',
     lineHeight: '3.5rem',
     textAlign: 'left',
-    marginBottom: '20px',
-    '@media(max-width: 600px)': {
+    marginBottom: theme.spacing(2.5),
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
     },
   },
   sectionOneSubheader: {
     fontSize: '1rem',
     textAlign: 'left',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
     },
   },
   sectionOneJoinButton: {
-    background: 'black',
-    color: 'white',
     borderRadius: '20px',
     width: '200px',
     height: '50px',
-    margin: '20px 0 20px 0',
+    margin: theme.spacing(2.5, 0),
     fontSize: '1.125rem',
-    '& > span': {
-      textTransform: 'none',
-    },
+    textTransform: 'none',
     '&:hover': {
-      backgroundColor: '#6db0a7',
+      backgroundColor: theme.palette.accent.main,
     },
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       width: '75%',
-      margin: '12px auto',
+      margin: theme.spacing(1.5, 'auto'),
     },
   },
   bannerImageWrapper: {
@@ -70,9 +66,9 @@ export const useSectionOneStyles = makeStyles(() => ({
     flexShrink: 1,
     justifyContent: 'right',
     height: '400px',
-    padding: '16px 0',
+    padding: theme.spacing(2, 0),
     overflow: 'hidden',
-    '@media(min-width: 601px)': {
+    [theme.breakpoints.up('sm')]: {
       height: '275px',
     },
     '@media(min-width: 700px)': {
@@ -89,7 +85,7 @@ export const useSectionOneStyles = makeStyles(() => ({
     height: 'auto',
     objectFit: 'contain',
     borderRadius: '16px',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
   },

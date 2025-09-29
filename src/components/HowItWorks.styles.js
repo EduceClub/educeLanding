@@ -1,13 +1,16 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 export const useHowItWorksStyles = makeStyles((theme) => ({
   howToContentWrapper: {
-    padding: '12px 36px',
+    padding: theme.spacing(1.5, 4),
+    minHeight: '500px',
+    display: 'flex',
+    flexDirection: 'column',
 
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       margin: '0px',
       borderRadius: '0px',
-      padding: '12px 36px',
+      padding: theme.spacing(1.5, 4),
     },
   },
   tabWrapper: {
@@ -16,29 +19,32 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
     },
   },
   tabButton: {
-    color: 'black !important',
+    color: theme.palette.primary.main,
+    transition: 'color 0.3s ease',
+    fontSize: '1rem',
     '&:hover': {
-      backgroundColor: '#6db0a7',
+      color: theme.palette.accent.main,
     },
   },
   tabPanel: {
+    margin: 'auto',
     '& > div': {
-      padding: '24px 0px',
+      padding: theme.spacing(3, 0),
       width: '100%',
     },
   },
   contentWrapper: {
     display: 'flex',
-    gap: '16px',
+    gap: theme.spacing(2),
     alignItems: 'center',
     margin: 'auto',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      gap: '24px',
+      gap: theme.spacing(3),
     },
-    '@media(min-width: 1000px)': {
+    [theme.breakpoints.up('md')]: {
       maxWidth: '75%',
-      gap: '2rem',
+      gap: theme.spacing(2.5),
     },
   },
   textWrapper: {
@@ -47,7 +53,7 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
     flexBasis: '40%',
     flexGrow: 1,
     flexShrink: 1,
-    '@media(min-width: 800px)': {
+    [theme.breakpoints.up('md')]: {
       flexBasis: '30%',
     },
   },
@@ -57,7 +63,7 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
   },
   description: {
     textAlign: 'left',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       margin: '0px',
     },
   },
@@ -66,17 +72,17 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: '60%',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '0px',
     },
-    '@media(min-width: 800px)': {
+    [theme.breakpoints.up('md')]: {
       flexBasis: '70%',
     },
   },
   gif: {
     borderRadius: '10px',
     width: '100%',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       width: '75%',
       margin: 'auto',
     },

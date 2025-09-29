@@ -1,16 +1,16 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
-export const useFooterStyles = makeStyles(() => ({
+export const useFooterStyles = makeStyles((theme) => ({
   footerWrapper: {
-    backgroundColor: 'black',
+    backgroundColor: theme.palette.primary.main, // Black from theme
     height: '75px',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
   educeCopyright: {
-    color: 'white',
+    color: theme.palette.secondary.main, // White from theme
     textAlign: 'left',
-    marginLeft: '15px',
+    marginLeft: theme.spacing(2),
   },
 }));

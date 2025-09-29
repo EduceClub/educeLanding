@@ -1,23 +1,22 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
-export const useSectionTwoStyles = makeStyles(() => ({
+export const useSectionTwoStyles = makeStyles((theme) => ({
   sectionTwoBackdrop: {
-    background: 'black',
+    background: theme.palette.primary.main,
   },
   sectionTwoWrapper: {
     display: 'flex',
-    gap: '4rem',
+    gap: theme.spacing(4),
     alignItems: 'center',
     margin: 'auto',
     padding: '0 24px',
-    background: 'black',
     '@media(max-width: 600px)': {
       flexDirection: 'column',
       height: 'auto',
     },
-    '@media(min-width: 1000px)': {
+    [theme.breakpoints.up('md')]: {
       maxWidth: '75%',
-      gap: '6rem',
+      gap: theme.spacing(6),
     },
   },
   imageWrapper: {
@@ -25,15 +24,15 @@ export const useSectionTwoStyles = makeStyles(() => ({
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: '50%',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '0px',
     },
   },
   sectionTwoImage: {
     width: '100%',
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       width: '75%',
-      paddingTop: '24px',
+      paddingTop: theme.spacing(3),
       margin: 'auto',
     },
   },
@@ -46,14 +45,14 @@ export const useSectionTwoStyles = makeStyles(() => ({
     justifyContent: 'flex-start',
     minWidth: '40%',
     color: 'white',
-    padding: '48px 0',
-    '@media(max-width: 600px)': {
+    padding: theme.spacing(8, 0),
+    [theme.breakpoints.down('sm')]: {
       paddingTop: 0,
     },
   },
   sectionTwoHeaderTextWrapper: {
     display: 'flex',
-    margin: '0px 0 20px 0',
+    marginBottom: theme.spacing(2.5),
   },
   sectionTwoHeader: {
     fontWeight: 'bold',
@@ -61,9 +60,9 @@ export const useSectionTwoStyles = makeStyles(() => ({
     lineHeight: '3.5rem',
     textAlign: 'left',
     '& > span': {
-      color: '#AAF0C1',
+      color: theme.palette.accent.secondary,
     },
-    '@media(max-width: 600px)': {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '2rem',
       lineHeight: '2.5rem',
       width: '100%',
@@ -77,6 +76,6 @@ export const useSectionTwoStyles = makeStyles(() => ({
   sectionTwoText: {
     fontSize: '1rem',
     textAlign: 'left',
-    margin: '10px 0 10px 0',
+    margin: theme.spacing(1.25, 0),
   },
 }));
