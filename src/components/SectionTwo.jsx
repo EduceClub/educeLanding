@@ -9,7 +9,11 @@ const SectionTwo = () => {
     <div className={classes.sectionTwoBackdrop}>
       <div className={classes.sectionTwoWrapper}>
         <div className={classes.imageWrapper}>
-          <img className={classes.sectionTwoImage} src={ConfusionGuy} />
+          <img
+            className={classes.sectionTwoImage}
+            src={ConfusionGuy}
+            alt="information overload graphic"
+          />
         </div>
         <div className={classes.sectionTwoContentWrapper}>
           <div className={classes.sectionTwoHeaderTextWrapper}>

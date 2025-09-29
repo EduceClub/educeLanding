@@ -24,7 +24,11 @@ const SectionOne = () => {
         </Button>
       </div>
       <div className={classes.bannerImageWrapper}>
-        <img className={classes.bannerImage} src={ScreenGIF} />
+        <img
+          className={classes.bannerImage}
+          src={ScreenGIF}
+          alt="gif of using educe"
+        />
       </div>
     </div>
   );

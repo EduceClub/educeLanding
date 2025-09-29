@@ -85,7 +85,11 @@ const HowItWorks = () => {
           </Typography>
         </Box>
         <Box className={classes.imageWrapper}>
-          <img className={classes.gif} src={Store2} />
+          <img
+            className={classes.gif}
+            src={Store2}
+            alt="gif of adding a card"
+          />
         </Box>
       </TabPanel>
 
@@ -101,7 +105,11 @@ const HowItWorks = () => {
           </Typography>
         </Box>
         <Box className={classes.imageWrapper}>
-          <img className={classes.gif} src={Buildon} />
+          <img
+            className={classes.gif}
+            src={Buildon}
+            alt="gif of card content interaction"
+          />
         </Box>
       </TabPanel>
 
@@ -117,7 +125,11 @@ const HowItWorks = () => {
           </Typography>
         </Box>
         <Box className={classes.imageWrapper}>
-          <img className={classes.gif} src={Recall} />
+          <img
+            className={classes.gif}
+            src={Recall}
+            alt="gif of category tags functionality"
+          />
         </Box>
       </TabPanel>
 
@@ -136,7 +148,11 @@ const HowItWorks = () => {
           </Typography>
         </Box>
         <Box className={classes.imageWrapper}>
-          <img className={classes.gif} src={Share} />
+          <img
+            className={classes.gif}
+            src={Share}
+            alt="gif of share functionality"
+          />
         </Box>
       </TabPanel>
     </div>
