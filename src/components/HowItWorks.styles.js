@@ -89,7 +89,7 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
     },
   },
   gif: {
-    borderRadius: '10px',
+    borderRadius: '16px',
     width: 'auto',
     height: 'auto',
     maxWidth: '100%',

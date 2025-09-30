@@ -64,29 +64,20 @@ export const useSimplifyKnowledgeStyles = makeStyles((theme) => ({
     display: 'flex',
     flexGrow: 1,
     flexShrink: 1,
-    justifyContent: 'right',
-    height: '400px',
+    justifyContent: 'center',
     padding: theme.spacing(2, 0),
     overflow: 'hidden',
-    [theme.breakpoints.up('sm')]: {
-      height: '275px',
-    },
-    '@media(min-width: 700px)': {
-      height: '325px',
-    },
-    '@media(min-width: 1100px)': {
-      height: '400px',
-    },
   },
   bannerImage: {
-    maxHeight: '100%',
-    maxWidth: '100%',
     width: 'auto',
     height: 'auto',
+    maxHeight: '400px',
+    maxWidth: '40vw',
     objectFit: 'contain',
     borderRadius: '16px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      maxWidth: '100%',
     },
   },
 }));
