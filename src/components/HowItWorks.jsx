@@ -44,7 +44,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div id="howItWorks" className={classes.howToContentWrapper}>
+    <div id="howItWorks" className={classes.sectionWrapper}>
       <Typography variant="h1" className={classes.header}>
         How it Works
       </Typography>

@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
 export const useHowItWorksStyles = makeStyles((theme) => ({
-  howToContentWrapper: {
+  sectionWrapper: {
     padding: theme.spacing(1.5, 4),
     paddingTop: theme.spacing(8),
     maxWidth: '700px',
@@ -53,15 +53,14 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
   },
   tabPanel: {
     margin: 'auto',
-    '& > div': {
-      padding: theme.spacing(3, 0),
-      width: '100%',
-    },
   },
   contentWrapper: {
+    padding: theme.spacing(3, 0),
+    maxWidth: '100%',
     display: 'flex',
     gap: theme.spacing(2),
     alignItems: 'center',
+    justifyContent: 'center',
     margin: 'auto',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
@@ -74,11 +73,9 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
   textWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '40%',
-    flexGrow: 1,
-    flexShrink: 1,
-    [theme.breakpoints.up('md')]: {
-      flexBasis: '30%',
+    width: '30%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
     },
   },
   title: {
@@ -91,25 +88,16 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
       margin: '0px',
     },
   },
-  imageWrapper: {
-    display: 'flex',
-    flexGrow: 1,
-    flexShrink: 1,
-    flexBasis: '60%',
-
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: '0px',
-    },
-    [theme.breakpoints.up('md')]: {
-      flexBasis: '70%',
-    },
-  },
   gif: {
     borderRadius: '10px',
-    width: '100%',
+    width: 'auto',
+    height: 'auto',
+    maxWidth: '100%',
+    maxHeight: '400px',
     [theme.breakpoints.down('sm')]: {
-      width: '75%',
+      width: '100%',
       margin: 'auto',
+      display: 'block',
     },
   },
 }));
