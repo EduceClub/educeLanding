@@ -3,17 +3,42 @@ import { makeStyles } from '@mui/styles';
 export const useHowItWorksStyles = makeStyles((theme) => ({
   howToContentWrapper: {
     padding: theme.spacing(1.5, 4),
-    minHeight: '500px',
-    display: 'flex',
-    flexDirection: 'column',
+    paddingTop: theme.spacing(8),
+    maxWidth: '700px',
+    margin: 'auto',
 
     [theme.breakpoints.down('sm')]: {
       margin: '0px',
       borderRadius: '0px',
       padding: theme.spacing(1.5, 4),
     },
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '75%',
+    },
   },
-  tabWrapper: {
+  header: {
+    fontWeight: 'bold',
+    fontSize: '2.5rem',
+    lineHeight: '2.5rem',
+    textAlign: 'left',
+    marginBottom: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
+  },
+  subheader: {
+    textAlign: 'left',
+    marginBottom: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
+  },
+  tabAreaWrapper: {
+    minHeight: '500px',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  tabListWrapper: {
     '& button': {
       textTransform: 'none',
     },
@@ -21,7 +46,7 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
   tabButton: {
     color: theme.palette.primary.main,
     transition: 'color 0.3s ease',
-    fontSize: '1rem',
+    fontSize: '0.9rem',
     '&:hover': {
       color: theme.palette.accent.main,
     },
@@ -43,7 +68,6 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
       gap: theme.spacing(3),
     },
     [theme.breakpoints.up('md')]: {
-      maxWidth: '75%',
       gap: theme.spacing(2.5),
     },
   },
@@ -72,6 +96,7 @@ export const useHowItWorksStyles = makeStyles((theme) => ({
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: '60%',
+
     [theme.breakpoints.down('sm')]: {
       marginLeft: '0px',
     },

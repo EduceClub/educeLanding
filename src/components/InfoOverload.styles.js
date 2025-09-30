@@ -1,10 +1,10 @@
 import { makeStyles } from '@mui/styles';
 
-export const useSectionTwoStyles = makeStyles((theme) => ({
-  sectionTwoBackdrop: {
+export const useInfoOverloadStyles = makeStyles((theme) => ({
+  backdrop: {
     background: theme.palette.primary.main,
   },
-  sectionTwoWrapper: {
+  sectionWrapper: {
     display: 'flex',
     gap: theme.spacing(4),
     alignItems: 'center',
@@ -28,7 +28,7 @@ export const useSectionTwoStyles = makeStyles((theme) => ({
       marginLeft: '0px',
     },
   },
-  sectionTwoImage: {
+  lefthandImage: {
     width: '100%',
     [theme.breakpoints.down('sm')]: {
       width: '75%',
@@ -36,7 +36,7 @@ export const useSectionTwoStyles = makeStyles((theme) => ({
       margin: 'auto',
     },
   },
-  sectionTwoContentWrapper: {
+  contentWrapper: {
     display: 'flex',
     flexGrow: 1,
     flexShrink: 1,
@@ -50,11 +50,11 @@ export const useSectionTwoStyles = makeStyles((theme) => ({
       paddingTop: 0,
     },
   },
-  sectionTwoHeaderTextWrapper: {
+  headerTextWrapper: {
     display: 'flex',
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(2),
   },
-  sectionTwoHeader: {
+  header: {
     fontWeight: 'bold',
     fontSize: '3rem',
     lineHeight: '3.5rem',
@@ -69,11 +69,11 @@ export const useSectionTwoStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
-  sectionTwoContentTextWrapper: {
+  contentTextWrapper: {
     display: 'flex',
     flexDirection: 'column',
   },
-  sectionTwoText: {
+  text: {
     fontSize: '1rem',
     textAlign: 'left',
     margin: theme.spacing(1.25, 0),

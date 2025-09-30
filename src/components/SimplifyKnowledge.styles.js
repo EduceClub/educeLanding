@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
-export const useSectionOneStyles = makeStyles((theme) => ({
-  sectionOneWrapper: {
+export const useSimplifyKnowledgeStyles = makeStyles((theme) => ({
+  sectionWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -28,24 +28,24 @@ export const useSectionOneStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
   },
-  sectionOneHeader: {
+  header: {
     fontWeight: 'bold',
     fontSize: '3rem',
     lineHeight: '3.5rem',
     textAlign: 'left',
-    marginBottom: theme.spacing(2.5),
+    marginBottom: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
     },
   },
-  sectionOneSubheader: {
+  subheader: {
     fontSize: '1rem',
     textAlign: 'left',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
     },
   },
-  sectionOneJoinButton: {
+  joinButton: {
     borderRadius: '20px',
     width: '200px',
     height: '50px',
@@ -79,7 +79,7 @@ export const useSectionOneStyles = makeStyles((theme) => ({
     },
   },
   bannerImage: {
-    maxHeight: '100%', // key: let height shrink with aspect ratio
+    maxHeight: '100%',
     maxWidth: '100%',
     width: 'auto',
     height: 'auto',

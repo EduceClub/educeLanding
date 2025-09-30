@@ -1,24 +1,24 @@
 import { Button, Typography } from '@mui/material';
-import { useSectionOneStyles } from './SectionOne.styles';
+import { useSimplifyKnowledgeStyles } from './SimplifyKnowledge.styles';
 import ScreenGIF from '../assets/2023_12_20_Final1.gif';
 
-const SectionOne = () => {
-  const classes = useSectionOneStyles();
+const SimplifyKnowledge = () => {
+  const classes = useSimplifyKnowledgeStyles();
 
   return (
-    <div className={classes.sectionOneWrapper}>
+    <div className={classes.sectionWrapper}>
       <div className={classes.bannerContentWrapper}>
-        <Typography className={classes.sectionOneHeader}>
+        <Typography className={classes.header} variant="h1">
           Simplify your knowledge
         </Typography>
-        <Typography className={classes.sectionOneSubheader}>
+        <Typography className={classes.subheader}>
           Capture and build on your insights like never before.
         </Typography>
         <Button
           variant="contained"
           target="_blank"
           href="https://app.educe.club/"
-          className={classes.sectionOneJoinButton}
+          className={classes.joinButton}
         >
           Join the club
         </Button>
@@ -34,4 +34,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default SimplifyKnowledge;

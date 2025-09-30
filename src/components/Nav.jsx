@@ -22,7 +22,7 @@ const Nav = () => {
 
   const handleClick = (id) => {
     const section = document.querySelector(id);
-    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    section.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
 
   return (

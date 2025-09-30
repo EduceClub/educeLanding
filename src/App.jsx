@@ -5,8 +5,8 @@ import {
 } from '@mui/material/styles';
 
 import Layout from './components/Layout';
-import SectionOne from './components/SectionOne';
-import SectionTwo from './components/SectionTwo';
+import SimplifyKnowledge from './components/SimplifyKnowledge';
+import InfoOverload from './components/InfoOverload';
 import HowItWorks from './components/HowItWorks';
 
 import './App.css';
@@ -36,8 +36,8 @@ function App() {
       <ThemeProvider theme={educeTheme}>
         <div className="App">
           <Layout>
-            <SectionOne />
-            <SectionTwo />
+            <SimplifyKnowledge />
+            <InfoOverload />
             <HowItWorks />
           </Layout>
         </div>
